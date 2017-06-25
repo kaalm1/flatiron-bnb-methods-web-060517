@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
     #This works, not sure why ???
     guests.map do |guest|
       guest.reviews
-    end.first
+    end.flatten
   end
 
   # def guests
