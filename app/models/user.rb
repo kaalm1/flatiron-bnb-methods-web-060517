@@ -18,8 +18,6 @@ class User < ActiveRecord::Base
   end
 
   def host_reviews
-    #Incorrect -- supposed to be without first
-    #This works, not sure why ???
     guests.map do |guest|
       guest.reviews
     end.flatten
